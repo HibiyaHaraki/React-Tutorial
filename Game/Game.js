@@ -13,6 +13,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Alert from 'react-bootstrap/Alert';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 import '../index.css';
 
@@ -133,6 +134,10 @@ export default class Game extends React.Component {
 
 		return (
 			<>
+			<Breadcrumb>
+				<Breadcrumb.Item href="../#home">Home</Breadcrumb.Item>
+				<Breadcrumb.Item active>tic-tac-toe</Breadcrumb.Item>
+			</Breadcrumb>
 			<Container fluid="sm" className="mx-auto my-5">
 				<Row>
 					<Col md className="m-auto">
@@ -153,7 +158,7 @@ export default class Game extends React.Component {
 								/>
 								<Alert
 									variant={(winner === null) ? "success" : "danger"}
-									className='mb-2 mt-2 p-1 text-center'
+									className='mb-2 mt-2 p-1 text-center fs-2 fw-bold'
 								>
 									{status}
 								</Alert>
